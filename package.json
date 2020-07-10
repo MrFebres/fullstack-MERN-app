@@ -1,0 +1,35 @@
+{
+  "name": "pokedb",
+  "version": "1.0.0",
+  "description": "Poke db backend server and DB connection",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "cd client && npm start",
+    "icl": "cd client && npm install",
+    "start": "concurrently -n 'server,client' -c 'green,blue' \"nodemon index.js\" \"npm run client\"",
+    "go": "nodemon index.js"
+  },
+  "keywords": [
+    "backend",
+    "nodeJS",
+    "expressJS",
+    "mongoDB",
+    "mongoose"
+  ],
+  "author": "Freddy Febres",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "concurrently": "^5.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "lodash": "^4.17.19",
+    "mongoose": "^5.9.22",
+    "morgan": "^1.10.0",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
